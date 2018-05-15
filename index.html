@@ -1,0 +1,638 @@
+<!doctype html>
+<head>
+  <meta title="Phaunoswatches">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/text-styles.css">
+</head>
+<style>
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  width: 100vw;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family:  ReformaGroteskDemiC;
+  font-size: 30px;
+  color: white;
+}
+h2, h3, h4, p {
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+}
+button {
+  font-family: OpenSans-Regular;
+  margin-top: 0.7em;
+}
+h2 {
+  font-size: 1.6em;
+}
+sup {
+  font-size: 0.48em;
+}
+/* ==== First Section Header ==== */
+header {
+  position: relative;
+  width:100%;
+  min-height: 600px;
+  padding: 0 10px;
+  background-image: url(img/1-head-image.png);
+  background-position: 47% 50%;
+  background-size: cover;
+}
+/* ---- menu hamburger ---- */
+.container {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #FFF;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+    background-color: black;
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+    background-color: black;
+}
+.bar4 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+    background-color: white;
+}
+.bar5 {opacity: 0;}
+.bar6 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+    background-color: white;
+}
+.change .bar4, .change .bar5, .change .bar6 {
+    width: 35px;
+    height: 5px;
+    background-color: #000;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+.hamburger {
+  height: 39px;
+}
+.mega-menu {
+  display: none;
+  transition: 0.4s;
+}
+.mega-menu h3 {
+  text-transform: uppercase;
+  color: black;
+}
+.container.change .mega-menu {
+  display: block;
+  position: absolute;
+  background-color: white;
+  width: 56vw;
+  height: 600px;
+  z-index: 2;
+  margin-left: -30px;
+  padding-left: 30px;
+  top: 0;
+  padding-top: 15px;
+  transition: 0.5s;
+}
+/* --- menu --- */
+.top-bar {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  padding: 0.5em;
+}
+.top-bar p {
+  font-size: 0.6em;
+  text-transform: uppercase;
+}
+.top-bar img {
+  height: 80px;
+  position: absolute;
+  z-index: 1;
+  margin: 0 auto;
+  left: calc(50vw - 68px);
+}
+.top-bar a img {
+  height: 50px;
+  padding-left: 10px;
+}
+.header-link {
+  box-sizing: content-box;
+  align-self: center;
+}
+.header-link:hover {
+  box-sizing: content-box;
+  cursor: pointer;
+  border-bottom: 2px solid orange;
+    /* padding-right: 20px; */
+  align-self: center;
+}
+.middle-bit {
+  height: inherit;
+  height: 80%;
+  display: flex;
+  flex-flow: column;
+  /* align-items: center; */
+  justify-content: center;
+  text-align: center;
+  margin: 60px auto;
+  padding: 0 4%;
+}
+.middle-bit, .middle-bit h3 {
+  text-align: left;
+}
+.middle-bit p {
+  font-family: OpenSans-Regular;
+  font-size: 13px;
+}
+.middle-bit strong {
+  color: #EDAB6E; /* orange hue */
+}
+.middle-bit button {
+  color: white;
+  align-self: center;
+  background-color: #EDAB6E; /* orange hue */
+  height: auto;
+  padding: 6px;
+  width: 100%;
+  border-radius: 20px;
+}
+.middle-bit p:last-child {
+  text-align: center;
+}
+.bottom-bar {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 53.6%;
+  height: 50px;
+  bottom: 20px;
+  font-size: 0.34em;
+  text-transform: uppercase;
+  font-family: OpenSans-Regular;
+  text-align: center;
+}
+/* .icons-1 {
+  float: left;
+} */
+.icons-2-3 {
+  display: flex;
+
+}
+.icon-bit {
+  margin: 0 0 0 16px;
+}
+
+/* ==== Second Section ==== */
+.watch-info {
+  color: black;
+  padding: 0 40px;
+  text-align: center;
+}
+.normal-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.normal-text h2 {
+  font-size: 1.2em;
+}
+.normal-text p {
+  font-family: OpenSans-Regular;
+  font-size: 0.52em;
+}
+.watch-and-icons {
+  width: 100%;
+  overflow: hidden;
+}
+.watch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.watch img:first-child {
+  width: 100%;
+}
+.collection-icons, .strap-icons {
+  font-family: OpenSans-Regular;
+  font-size: 0.4em;
+  color: #a9a9a9;
+  margin: 1em 0;
+}
+.strap-icons img:hover {
+  border: solid 2px orange;
+  border-radius: 50%;
+}
+#doric-black { font-family: OpenSans-Semibold; margin-left: 27px; font-size: 0.7em; color: black; }
+.watch-info-1 h2 {
+  font-family: ReformaGroteskLightC;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.watch-info-1 p {
+  font-family: OpenSans-Regular;
+  font-size: 0.4em;
+  color: #a9a9a9;
+  margin: -15px 0 1.2em 0;
+}
+.features {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+}
+.features hr {
+  margin: 0 auto;
+  height: 100px;
+}
+.desky {
+  display: none;
+}
+@media all and (min-width: 667px) {
+  h2 {
+    font-size: 2.5em;
+  }
+  .middle-bit button {
+    width: 20%;
+    align-self: flex-start;
+  }
+  .middle-bit p:last-child {
+    align-self: flex-start;
+  }
+  .watch-and-icons {
+    width: 70%;
+    display: grid;
+    flex-direction: row;
+    flex-wrap: wrap;
+    grid-template-areas:
+    "watch watch ."
+    "watch watch show"
+    "watch watch shiw"
+    "watch watch .";
+    margin: 0 auto;
+    padding-left: 7%;
+  }
+  .watch {
+    flex-grow: 2;
+    grid-area: watch;
+}
+  .collection-icons {
+    grid-area: show;
+  }
+  .strap-icons {
+    grid-area: shiw;
+  }
+  .watch img:first-child {
+    width: 60%;
+  }
+  .features {
+    display: flex;
+    margin-top: 90px;
+  }
+  .desky {
+    display: block;
+    height: 120px;
+  }
+}
+
+/* ==== Third Section ==== */
+.watch-explosion {
+  background-color: #2A2723;
+
+}
+.watch-explosion {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 20px;
+}
+.text-white {
+  text-align: center;
+  margin: 7%;
+}
+.text-white h2 {
+  font-size: 1.2em;
+}
+.text-white p {
+  font-family: OpenSans-Regular;
+  font-size: 0.45em;
+}
+.title {
+  display: grid;
+  grid-template-areas:  "img title"
+                        "img desc";
+                        /* "img desc"; */
+  grid-template-columns: 13fr 9fr;
+  text-align: left;
+  margin: 10px 0;
+}
+.title img {
+  width: 100%;
+  grid-area: img;
+}
+.text-a {
+  grid-area: title;
+  font-size: 0.5em;
+  align-self: flex-end;
+}
+.text-c {
+  grid-area: desc;
+}
+.text-c {
+  font-family: OpenSans-Regular;
+  font-size: 0.4em;
+}
+/* .text-c {
+  font-family: OpenSans-Regular;
+  font-size: 16px;
+} */
+@media all and (min-width: 667px) {
+  .text-white {
+    text-align: center;
+    margin: 3%;
+  }
+  .title {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1440px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .title img {
+    width: 40%;
+  }
+  .text-a {
+    align-self: center;
+  }
+}
+/* ==== Fourth Section ==== */
+.img-text {
+  background-image: url('img/4-2-watch-lay.png');
+  background-position: 50% 50%;
+  height: 600px;
+}
+.text-img {
+  background-image: url('img/4-1-watch-split.png');
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 600px;
+}
+.text-box {
+  margin: 0 auto;
+  padding: 1em;
+  background-color: lightgrey;
+  width: 90%;
+}
+/* ==== Fifth Section ==== */
+.main-left {
+  background-image: url('img/5-1-simple.png');
+}
+.main-right {
+  color: black;
+}
+/* ==== Footer ==== */
+footer {
+  background-image: url('img/99-footer-image.png');
+  height: 600px;
+  width: 100%;
+}
+</style>
+<body>
+<header>
+  <div class="top-bar">
+      <div class="container" onclick="myFunction(this)">
+        <a class="hamburger">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        <div class="mega-menu">
+          <div class="bar4"></div>
+          <div class="bar5"></div>
+          <div class="bar6"></div>
+          <div class="menu-items">
+            <h3>Start</h3>
+            <h3>Overview</h3>
+            <h3>Design</h3>
+            <h3>About Us</h3>
+            <h3>Our Approach</h3>
+            <h3>Reserve Yours</h3>
+            <span><img src=""><img src=""><img src=""></span>
+          </div>
+        </div>
+      </a>
+      </div>
+    <img src="img/1-head-logo.png" alt="Phaunoswatches Logo 2D Diamond crown" title="Welcome to Phaunoswatches">
+    <div class="header-link">
+      <p>Reserve Yours</p>
+    </div>
+  </div>
+  <div class="middle-bit">
+    <h2>Reconceptualizing<br/><strong>wood & steel </strong>watches.</h2>
+    <p>Be the first to know!</br>Receive your exclusive 55% early bird discount*</p>
+    <button><p>Claim Your Discount</p></button>
+    <p>*only limited quantity</p>
+  </div>
+  <div class="bottom-bar">
+    <span class="icons-1"><img src="img/1-icons-explore.png"><p>Explore</p></span>
+    <span class="icons-2-3"><span class="icon-bit"><img src="img/1-icons-play.png"><p>Watch Video</p></span><span class="icon-bit"><img src="img/1-icons-plus.png"><p>Reserve</p></span>
+    </span>
+  </div>
+</header>
+<div class="watch-info">
+  <div class="normal-text">
+    <h2>Simple is just better</h2>
+    <p>Uncompromised design and yet durable as a steel watch</p>
+  </div>
+  <div class="watch-and-icons">
+    <div class="watch">
+      <img src="img/2-leather-black.jpg">
+      <img src="img/2-icons-360.png">
+    </div>
+    <div class="collection-icons">
+      <p>COLLECTION</p>
+      <img src="img/2-1-pinky.png">
+      <img src="img/2-2-rose-gold.png">
+      <img src="img/2-3-black-gold.png">
+      <img src="img/2-4-silver.png">
+      <p id="doric-black">THE DORIC BLACK</p>
+    </div>
+    <div class="strap-icons">
+      <p>STRAP</p>
+      <img src="img/2-a-steel.png">
+      <img src="img/2-b-leather-black.png">
+      <img src="img/2-c-wood.png">
+      <p id="doric-black">LEATHER</p>
+    </div>
+  </div>
+    <div class="features">
+      <div class="watch-info-1">
+        <img src="img/2-icons-anvil.png">
+        <h2>316L</h2>
+        <p>Stainless Steel</p>
+      </div>
+<hr width="1px">
+      <div class="watch-info-1">
+        <img src="img/2-icons-wood.png">
+        <h2>Wood</h2>
+        <p>Certified Sustainable</p>
+      </div>
+<hr class="desky" width="1px" size="120px">
+      <div class="watch-info-1">
+        <img src="img/2-icons-gears.png">
+        <h2>1063<sup>CAL</sup></h2>
+        <p>Swiss Movement</p>
+      </div>
+<hr width="1px">
+      <div class="watch-info-1">
+        <img src="img/2-icons-sapphire.png">
+        <h2>Sapphire</h2>
+        <p>Protected Glass</p>
+      </div>
+<hr class="desky" width="1px">
+      <div class="watch-info-1">
+        <img src="img/2-icons-leather.png">
+        <h2>Leather</h2>
+        <p>Eco-friendly</p>
+      </div>
+<hr width="1px">
+      <div class="watch-info-1">
+        <img src="img/2-icons-water.png">
+        <h2>3<sup>ATM</sup></h2>
+        <p>Water Resistance</p>
+      </div>
+<hr class="desky" width="1px">
+      <div class="watch-info-1">
+        <img src="img/2-icons-shield.png">
+        <h2>3<sup>YEARS</sup></h2>
+        <p>Warranty</p>
+      </div>
+<hr width="1px" size="100px">
+  </div>
+</div>
+</div>
+<div class="watch-explosion">
+  <div class="text-white">
+    <h2>Minimalist Contemporary Design</h2>
+    <p>Unique innovative design revealed</p>
+  </div>
+  <div class="title">
+    <span class="text-a">Protective Glass</span>
+    <img src="img/3-watch-1.png">
+    <span class="text-c">Scratch resistant </br>Sapphire Glass</span>
+  </div>
+  <div class="title">
+    <span class="text-a">Protective Glass</span>
+    <img src="img/3-watch-2.png">
+    <span class="text-c">Scratch resistant Sapphire Glass</span>
+  </div>
+  <div class="title">
+    <span class="text-a">Protective Glass</span>
+    <img src="img/3-watch-3.png">
+    <span class="text-c">Scratch resistant Sapphire Glass</span>
+  </div>
+  <div class="title">
+    <span class="text-a">Protective Glass</span>
+    <img src="img/3-watch-4.png">
+    <span class="text-c">Scratch resistant Sapphire Glass</span>
+  </div>
+  <div class="title">
+    <span class="text-a">Protective Glass</span>
+    <img src="img/3-watch-5.png">
+    <span class="text-c">Scratch resistant Sapphire Glass</span>
+  </div>
+  <div class="title">
+    <span class="text-a">Protective Glass</span>
+    <img src="img/3-watch-6.png">
+    <span class="text-c">Scratch resistant Sapphire Glass</span>
+  </div>
+  <div class="title">
+    <span class="text-a">Protective Glass</span>
+    <img src="img/3-watch-7.png">
+    <span class="text-c">Scratch resistant Sapphire Glass</span>
+  </div>
+  <div class="title">
+    <span class="text-a">Protective Glass</span>
+    <img src="img/3-watch-8.png">
+    <span class="text-c">Scratch resistant Sapphire Glass</span>
+  </div>
+</div>
+<div class="watch-promo">
+    <div class="img-text"><div class="text-box"><h2>Inspired by the ancient greece of nature</h2><p>Our watches align modern civilization of the Ancient Greeks. Their beliefs and ideologies inspired us to develop a timepiece that connects us with the Earth.</p>
+      <p>3 core principles in designing our timepieces are:</p>
+      <p><strong>Nature - Beauty - Strength</strong></p></div></div>
+    <div class="text-img"><div class="text-box"><h2>Unisex Watches</h2><p>One watch for him and her</p>
+      <p>Our watches exemplify clean and modern design but yet classic. They elevate your everyday outfit, your mood and your spirit.</p>
+      </div>
+    </div>
+</div>
+<div class="watch-features">
+  <div class="main-left">
+    <p>About our approach</p>
+    <h2>Subtle yet simple timepieces crafted with refined attention to details and tailored to your individual style.</h2>
+  </div>
+  <div class="main-right">
+    <div class="title">
+      <img src="img/5-1-best.png">
+        <div class="main-right-text">
+        <span class="text-a">No more Inflated Prices</span>
+        <span class="text-c">With uncomprimising quality and nest materials, we cut out middle man and save you money. Therefore, you invest in a high quality watch that lasts.</span>
+        </div>
+    </div>
+    <div class="title">
+      <img src="img/5-2-test.png">
+        <div class="main-right-text">
+        <span class="text-a">No more Inflated Prices</span>
+        <span class="text-c">With uncomprimising quality and nest materials, we cut out middle man and save you money. Therefore, you invest in a high quality watch that lasts.</span>
+        </div>
+    </div>
+    <div class="title">
+      <img src="img/5-3-sustainable.png">
+        <div class="main-right-text">
+        <span class="text-a">No more Inflated Prices</span>
+        <span class="text-c">With uncomprimising quality and nest materials, we cut out middle man and save you money. Therefore, you invest in a high quality watch that lasts.</span>
+        </div>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="middle-bit">
+    <h3>Soon on Kickstarter!</h3>
+    <h2>Be the first to know!</h2>
+    <p>Be the first to know!</br>Receive your exclusive 55% early bird discount*</p>
+    <input type="text" name="First Name" value="">
+    <input type="text" name="email" value="">
+    <button><p>Notify Me</p></button>
+  </div>
+  <div class="bottom-bar">
+    <span class="bottom-menu"></span>
+    </span>
+  </div>
+</div>
+</footer>
+</body>
+<script>
+function myFunction(x) {
+    x.classList.toggle("change");
+
+}
+// Watch Hinamatsuri and Pop team epic
+</script>
