@@ -203,7 +203,7 @@ header {
   margin: 0 0 0 16px;
 }
 
-/* ==== Second Section ==== */
+/* ==== Second Section ========================================== */
 .watch-info {
   color: black;
   padding: 0 40px;
@@ -313,7 +313,7 @@ header {
   }
 }
 
-/* ==== Third Section ==== */
+/* ==== Third Section ========================================= */
 .watch-explosion {
   background-color: #2A2723;
 
@@ -384,19 +384,24 @@ header {
     align-self: center;
   }
 }
-/* ==== Fourth Section ==== */
+/* ==== Fourth Section ========================================= */
 .img-text {
   background-image: url('img/4-2-watch-lay.png');
-  background-position: 50% 50%;
-  height: 600px;
+  background-position: 22% 0px;
+  background-repeat: no-repeat;
+  background-size: 170%;
+  height: 580px;
 }
 .text-img {
   background-image: url('img/4-1-watch-split.png');
-  background-position: 50% 50%;
-  background-size: cover;
-  height: 600px;
+  background-position: 52% 0px;
+  background-repeat: no-repeat;
+  background-size: 170%;
+  height: 580px;
 }
 .text-box {
+  position: relative;
+  top: 50%;
   color: black;
   margin: 0 auto;
   padding: 1em;
@@ -404,15 +409,32 @@ header {
   width: 90%;
 }
 @media all and (min-width: 667px) {}
-/* ==== Fifth Section ==== */
+/* ==== Fifth Section ================================================ */
 .main-left {
   background-image: url('img/5-1-simple.png');
+  background-size: 130%;
+  padding: 5%;
+}
+.main-left-pos {
+  text-transform: uppercase;
 }
 .main-left p {
   text-align: center;
 }
 .main-right {
   color: black;
+}
+.arr {
+  display: flex;
+  flex-direction: column;
+}
+.arr img {
+  width: 15%;
+  align-self: center;
+}
+.main-right-text span {
+  align-self: center;
+  font-size: 1em;
 }
 /* ==== Footer ==== */
 footer {
@@ -591,25 +613,27 @@ footer {
 </div>
 <div class="watch-features">
   <div class="main-left">
-    <p>About our approach</p>
-    <h2>Subtle yet simple timepieces crafted with refined attention to details and tailored to your individual style.</h2>
+    <div class="main-left-pos">
+      <p>About our approach</p>
+      <h2>Subtle yet simple timepieces crafted with refined attention to details and tailored to your individual style.</h2>
+    </div>
   </div>
   <div class="main-right">
-    <div class="title">
+    <div class="title arr">
       <img src="img/5-1-best.png">
         <div class="main-right-text">
         <span class="text-a">No more Inflated Prices</span>
-        <span class="text-c">With uncomprimising quality and nest materials, we cut out middle man and save you money. Therefore, you invest in a high quality watch that lasts.</span>
+        <p class="text-c">With uncomprimising quality and nest materials, we cut out middle man and save you money. Therefore, you invest in a high quality watch that lasts.</p>
         </div>
     </div>
-    <div class="title">
+    <div class="title arr">
       <img src="img/5-2-test.png">
         <div class="main-right-text">
         <span class="text-a">No more Inflated Prices</span>
         <span class="text-c">With uncomprimising quality and nest materials, we cut out middle man and save you money. Therefore, you invest in a high quality watch that lasts.</span>
         </div>
     </div>
-    <div class="title">
+    <div class="title arr">
       <img src="img/5-3-sustainable.png">
         <div class="main-right-text">
         <span class="text-a">No more Inflated Prices</span>
