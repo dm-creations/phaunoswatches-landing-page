@@ -39,7 +39,7 @@
   src: url(../fonts/OpenSans-SemiboldItalic.ttf);
 }
 @font-face {
-  font-family: reformaGroteskMediumC;
+  font-family: ReformaGroteskMediumC;
   src: url(../fonts/ReformaGroteskMediumC.ttf);
 }
 @font-face {
@@ -60,4 +60,30 @@
 }
 .text-white {
   color: white;
+}
+.text-box h2 {
+  font-family: ReformaGroteskLightC;
+  font-size: 1.32em;
+}
+.text-box h2 ~ p {
+  margin-bottom: 1em;
+}
+.text-box p {
+  font-family: OpenSans-Regular;
+  font-size: 0.39em;
+}
+.text-box .centered-text {
+  text-align: center;
+  font-style: italic;
+}
+.main-left p {
+  font-family: OpenSans-Regular;
+  font-size: 0.5em;
+}
+.main-left h2 {
+  font-family: ReformaGroteskLightC;
+  font-size: 1.8em;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
 }
