@@ -41,6 +41,7 @@
 @font-face {
   font-family: ReformaGroteskMediumC;
   src: url(../fonts/ReformaGroteskMediumC.ttf);
+  letter-spacing: 1.1px;
 }
 @font-face {
   font-family: ReformaGroteskDemiC;
@@ -49,6 +50,7 @@
 @font-face {
   font-family: ReformaGroteskLightC;
   src: url(../fonts/ReformaGroteskLightC.ttf);
+  letter-spacing: 1.1px;
 }
 @font-face {
   font-family: ReformaGroteskBoldC;
@@ -78,12 +80,12 @@
 }
 .main-left p {
   font-family: OpenSans-Regular;
-  font-size: 0.5em;
+  font-size: 0.42em;
 }
 .main-left h2 {
   font-family: ReformaGroteskLightC;
-  font-size: 1.8em;
-  width: 90%;
+  font-size: 1.4em;
+  width: 86%;
   margin: 0 auto;
   text-align: center;
 }

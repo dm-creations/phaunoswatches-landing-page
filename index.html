@@ -322,7 +322,7 @@ header {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 0 20px;
+    padding: 20px;
 }
 .text-white {
   text-align: center;
@@ -411,12 +411,20 @@ header {
 @media all and (min-width: 667px) {}
 /* ==== Fifth Section ================================================ */
 .main-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-image: url('img/5-1-simple.png');
   background-size: 130%;
+  min-height: 275px;
   padding: 5%;
 }
 .main-left-pos {
   text-transform: uppercase;
+}
+.main-left-pos h2 {
+  margin-top: 10px;
+  letter-spacing: 1.1px;
 }
 .main-left p {
   text-align: center;
@@ -432,15 +440,67 @@ header {
   width: 15%;
   align-self: center;
 }
-.main-right-text span {
-  align-self: center;
+.main-right-text .text-a {
+  display: block;
+  font-family: ReformaGroteskLightC;
+  letter-spacing: 1.2px;
+  text-align: center;
+  text-transform: uppercase;
   font-size: 1em;
 }
 /* ==== Footer ==== */
 footer {
   background-image: url('img/99-footer-image.png');
+  background-size: 330%;
+  background-position: 20%;
   height: 600px;
   width: 100%;
+}
+.footer-bit {
+  text-align: center;
+  padding-top: 15%;
+}
+.footer-bit h3 {
+  font-family: OpenSans-Regular;
+  font-size: 0.6em;
+  text-transform: uppercase;
+}
+.footer-bit h2 {
+  font-family: ReformaGroteskLightC;
+  font-size: 1.7em;
+  text-transform: uppercase;
+}
+.footer-bit p {
+  font-family: OpenSans-Regular;
+  font-size: 0.5em;
+  text-transform: capitalize;
+}
+.footer-bit input {
+  padding-top: 1.5em;
+  font-size: 0.7em;
+  color: white;
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+  background-color: rgba(0,0,0,0);
+  border: 0;
+  border-bottom: 1px solid gray;
+}
+.footer-bit input::placeholder {
+  color: #bfbfbf;
+}
+.footer-bit button {
+  color: white;
+  align-self: center;
+  background-color: #EDAB6E; /* orange hue */
+  height: auto;
+  margin: 3.5em auto;
+  padding: 6px;
+  width: 40%;
+  border-radius: 20px;
+}
+.footer-bit button p {
+  font-size: 1.5em;
 }
 </style>
 <body>
@@ -630,25 +690,25 @@ footer {
       <img src="img/5-2-test.png">
         <div class="main-right-text">
         <span class="text-a">No more Inflated Prices</span>
-        <span class="text-c">With uncomprimising quality and nest materials, we cut out middle man and save you money. Therefore, you invest in a high quality watch that lasts.</span>
+        <p class="text-c">With uncomprimising quality and nest materials, we cut out middle man and save you money. Therefore, you invest in a high quality watch that lasts.</p>
         </div>
     </div>
     <div class="title arr">
       <img src="img/5-3-sustainable.png">
         <div class="main-right-text">
         <span class="text-a">No more Inflated Prices</span>
-        <span class="text-c">With uncomprimising quality and nest materials, we cut out middle man and save you money. Therefore, you invest in a high quality watch that lasts.</span>
+        <p class="text-c">With uncomprimising quality and nest materials, we cut out middle man and save you money. Therefore, you invest in a high quality watch that lasts.</p>
         </div>
     </div>
   </div>
 </div>
 <footer>
-  <div class="middle-bit">
+  <div class="footer-bit">
     <h3>Soon on Kickstarter!</h3>
     <h2>Be the first to know!</h2>
-    <p>Be the first to know!</br>Receive your exclusive 55% early bird discount*</p>
-    <input type="text" name="First Name" value="">
-    <input type="text" name="email" value="">
+    <p>Receive your exclusive 55% early bird discount*</p>
+    <input type="text" name="First Name" value="" placeholder="First name">
+    <input type="text" name="email" value="" placeholder="Email">
     <button><p>Notify Me</p></button>
   </div>
   <div class="bottom-bar">
