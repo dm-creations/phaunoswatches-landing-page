@@ -385,7 +385,10 @@ header {
   }
 }
 /* ==== Fourth Section ========================================= */
-.img-text {
+.backing {
+  background-color: white;
+}
+  .img-text {
   background-image: url('img/4-2-watch-lay.png');
   background-position: 22% 0px;
   background-repeat: no-repeat;
@@ -408,7 +411,15 @@ header {
   background-color: #F0F0F0;
   width: 90%;
 }
-@media all and (min-width: 667px) {}
+@media all and (min-width: 667px) {
+  .img-text {
+    background-size: 100%;
+    width: 60%;
+  }
+  .text-box {
+    width: 60%;
+  }
+}
 /* ==== Fifth Section ================================================ */
 .main-left {
   display: flex;
@@ -501,6 +512,21 @@ footer {
 }
 .footer-bit button p {
   font-size: 1.5em;
+}
+.footer-bar {
+  display: flex;
+  position: relative;
+  background-color: rgba(0,0,0,0.6);
+  height: 65px;
+  width: 100%;
+  bottom: -120px;
+  padding: 2.5px 0 2.5px;
+  justify-content: center;
+  text-transform: uppercase;
+}
+.bottom-menu {
+  font-size: 0.7em;
+  align-items: center;
 }
 </style>
 <body>
@@ -662,6 +688,7 @@ footer {
     <span class="text-c">Scratch resistant Sapphire Glass</span>
   </div>
 </div>
+<div class="backing">
 <div class="watch-promo">
     <div class="img-text"><div class="text-box"><h2>Inspired by the ancient Greece of nature</h2><p>Our watches align modern civilization of the Ancient Greeks. <br />Their beliefs and ideologies inspired us to develop a timepiece that connects us with the Earth.</p>
       <p>3 core principles in designing our timepieces are:</p>
@@ -670,6 +697,7 @@ footer {
       <p>Our watches exemplify clean and modern design but yet classic. They elevate your everyday outfit, your mood and your spirit.</p>
       </div>
     </div>
+</div>
 </div>
 <div class="watch-features">
   <div class="main-left">
@@ -711,8 +739,8 @@ footer {
     <input type="text" name="email" value="" placeholder="Email">
     <button><p>Notify Me</p></button>
   </div>
-  <div class="bottom-bar">
-    <span class="bottom-menu"></span>
+  <div class="footer-bar">
+    <span class="bottom-menu">info@phaunoswatches.com</span>
     </span>
   </div>
 </div>
