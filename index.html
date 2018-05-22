@@ -412,12 +412,43 @@ header {
   width: 90%;
 }
 @media all and (min-width: 667px) {
+  .backing {
+    width: 75%;
+    padding: 40px 0;
+    margin: 0 auto;
+  }
   .img-text {
-    background-size: 100%;
-    width: 60%;
+    margin-bottom: 20px;
+    background-size: 130%;
+    background-position: 50% 50%;
+    width: 66.5%;
+    max-height: 350px;
   }
   .text-box {
     width: 60%;
+  }
+  .text-box.left {
+    background-position: 50% 50%;
+    background-size: 120%;
+    width: 80%;
+    top: 10%;
+    margin-left: 75%;
+    height: 80%;
+  }
+  .text-box.right {
+    background-position: 50% 50%;
+    background-size: 120%;
+    width: 80%;
+    top: 10%;
+    margin-left: -49.5%;
+    height: 80%;
+  }
+  .text-img {
+    margin-left: auto;
+    background-size: 130%;
+    background-position: 50% 50%;
+    width: 67%;
+    max-height: 350px;
   }
 }
 /* ==== Fifth Section ================================================ */
@@ -459,8 +490,41 @@ header {
   text-transform: uppercase;
   font-size: 1em;
 }
+@media all and (min-width: 667px) {
+  .watch-features {
+    display: flex;
+  }
+  .main-left {
+    background-size: 150%;
+    width: 50%;
+    height: 680px;
+  }
+  .main-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding:6.5%;
+    width: 50%;
+    height: 680px;
+  }
+  .title.arr {
+    width: 100%;
+  }
+  .main-right-text {
+    width: 70%;
+  }
+  .arr {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-column-gap: 5px;
+  }
+  .arr img {
+    width: 100%;
+  }
+}
 /* ==== Footer ==== */
 footer {
+  position: relative;
   background-image: url('img/99-footer-image.png');
   background-size: 330%;
   background-position: 20%;
@@ -513,13 +577,16 @@ footer {
 .footer-bit button p {
   font-size: 1.5em;
 }
+.foot-menu, .social, .copyright {
+  display: none;
+}
 .footer-bar {
+  position: absolute;
   display: flex;
-  position: relative;
   background-color: rgba(0,0,0,0.6);
   height: 65px;
   width: 100%;
-  bottom: -120px;
+  bottom: 0;
   padding: 2.5px 0 2.5px;
   justify-content: center;
   text-transform: uppercase;
@@ -527,6 +594,38 @@ footer {
 .bottom-menu {
   font-size: 0.7em;
   align-items: center;
+}
+@media all and (min-width: 667px) {
+  footer {
+    background-size: cover;
+    height: 900px;
+  }
+  .signup {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .footer-bit input {
+    width: 15%;
+    margin: 0 10px;
+  }
+  .footer-bit button {
+    width: 15%;
+    margin: 0 10px;
+  }
+  .footer-bar {
+    justify-content: space-between;
+  }
+  .foot-menu, .social, .copyright {
+    display: block;
+  }
+  .footer-bar span:first-child {
+    margin-left: 10px;
+  }
+  .footer-bar span:last-child {
+    margin-right: 10px;
+  }
 }
 </style>
 <body>
@@ -653,47 +752,47 @@ footer {
     <span class="text-c">Scratch resistant </br>Sapphire Glass</span>
   </div>
   <div class="title">
-    <span class="text-a">Protective Glass</span>
+    <span class="text-a">Dial and Hands</span>
     <img src="img/3-watch-2.png">
-    <span class="text-c">Scratch resistant Sapphire Glass</span>
+    <span class="text-c">Luminous Hands</span>
   </div>
   <div class="title">
-    <span class="text-a">Protective Glass</span>
+    <span class="text-a">Wooden Dial</span>
     <img src="img/3-watch-3.png">
-    <span class="text-c">Scratch resistant Sapphire Glass</span>
+    <span class="text-c">Sustainably Forested Wood</span>
   </div>
   <div class="title">
-    <span class="text-a">Protective Glass</span>
+    <span class="text-a">Movement</span>
     <img src="img/3-watch-4.png">
-    <span class="text-c">Scratch resistant Sapphire Glass</span>
+    <span class="text-c">Swiss Movement from Ronda</span>
   </div>
   <div class="title">
-    <span class="text-a">Protective Glass</span>
+    <span class="text-a">Middle Case</span>
     <img src="img/3-watch-5.png">
-    <span class="text-c">Scratch resistant Sapphire Glass</span>
+    <span class="text-c">Corrosion Resistance 316L Stainless Steel</span>
   </div>
   <div class="title">
-    <span class="text-a">Protective Glass</span>
+    <span class="text-a">Wooden Ring</span>
     <img src="img/3-watch-6.png">
-    <span class="text-c">Scratch resistant Sapphire Glass</span>
+    <span class="text-c">Sustainably Forested Wood<br />No Glue Needed</span>
   </div>
   <div class="title">
-    <span class="text-a">Protective Glass</span>
+    <span class="text-a">Crown</span>
     <img src="img/3-watch-7.png">
-    <span class="text-c">Scratch resistant Sapphire Glass</span>
+    <span class="text-c">Corrosion Resistance 316L Stainless Steel</span>
   </div>
   <div class="title">
-    <span class="text-a">Protective Glass</span>
+    <span class="text-a">Back Case</span>
     <img src="img/3-watch-8.png">
-    <span class="text-c">Scratch resistant Sapphire Glass</span>
+    <span class="text-c">Corrosion Resistance 316L Stainless Steel</span>
   </div>
 </div>
 <div class="backing">
 <div class="watch-promo">
-    <div class="img-text"><div class="text-box"><h2>Inspired by the ancient Greece of nature</h2><p>Our watches align modern civilization of the Ancient Greeks. <br />Their beliefs and ideologies inspired us to develop a timepiece that connects us with the Earth.</p>
+    <div class="img-text"><div class="text-box left"><h2>Inspired by the ancient Greece of nature</h2><p>Our watches align modern civilization of the Ancient Greeks. <br />Their beliefs and ideologies inspired us to develop a timepiece that connects us with the Earth.</p>
       <p>3 core principles in designing our timepieces are:</p>
       <p class="centered-text"><strong>Nature - Beauty - Strength</strong></p></div></div>
-    <div class="text-img"><div class="text-box"><h2>Unisex Watches</h2><p>One watch for him and her</p>
+    <div class="text-img"><div class="text-box right"><h2>Unisex Watches</h2><p>One watch for him and her</p>
       <p>Our watches exemplify clean and modern design but yet classic. They elevate your everyday outfit, your mood and your spirit.</p>
       </div>
     </div>
@@ -735,12 +834,28 @@ footer {
     <h3>Soon on Kickstarter!</h3>
     <h2>Be the first to know!</h2>
     <p>Receive your exclusive 55% early bird discount*</p>
-    <input type="text" name="First Name" value="" placeholder="First name">
-    <input type="text" name="email" value="" placeholder="Email">
-    <button><p>Notify Me</p></button>
+    <form class="signup">
+      <input type="text" name="First Name" value="" placeholder="First name">
+      <input type="text" name="email" value="" placeholder="Email">
+      <button><p>Notify Me</p></button>
+    </form>
   </div>
   <div class="footer-bar">
     <span class="bottom-menu">info@phaunoswatches.com</span>
+    <div class="foot-menu">
+      <a>Start</a>
+      <a>Overview</a>
+      <a>Design</a>
+      <a>About Us</a>
+      <a>Our Approach</a>
+    </div>
+    <div class="social">
+      <a><img src="img/99-footer-icon-twitter.png"></a>
+      <a><img src="img/99-footer-icon-fb.png"></a>
+      <a><img src="img/99-footer-icon-insta.png"</a>
+    </div>
+    <span class="copyright">
+      &copy; PHAUNOSWATCHES 2018
     </span>
   </div>
 </div>
